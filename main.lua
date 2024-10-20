@@ -22,7 +22,6 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
-repeat task.wait() until game.Players.LocalPlayer.Character
 if not game.Players.LocalPlayer.Character:FindFirstChild("entered") and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
 repeat task.wait()
 firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.Lobby.Teleport1.TouchInterest.Parent, 0)
@@ -31,12 +30,6 @@ until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 end
 
 wait(0.2)
-
-if BugFixes == true then
-
-wait(0.4)
-
-end
 
 if AdminInvis == true then
 
@@ -55,6 +48,7 @@ for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
                     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 1)
                 end
             end
+	end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Slapple's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
@@ -62,12 +56,14 @@ end
 
 if CandyFarm == true then
 
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") then
 for i, v in pairs(game.Workspace.CandyCorns:GetChildren()) do
                 if game.Players.LocalPlayer.Character:FindFirstChild("Head") and v:FindFirstChildWhichIsA("TouchTransmitter") then
                     firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 0)
                     firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 1)
                 end
             end
+	end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Candy's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
 
