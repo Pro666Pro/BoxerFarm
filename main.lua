@@ -33,7 +33,7 @@ wait(0.2)
 
 if BugFixes == true then
 
-wait(0.6)
+wait(1)
 
 end
 
