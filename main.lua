@@ -54,7 +54,6 @@ for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
                     firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 1)
                 end
             end
-       end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Slapple's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
@@ -68,7 +67,6 @@ for i, v in pairs(game.Workspace.CandyCorns:GetChildren()) do
                     firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 1)
                 end
             end
-      end
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Candy's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
 
