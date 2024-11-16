@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 :)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 if not game.IsLoaded then
     game.Loaded:Wait()
 end
@@ -50,6 +50,8 @@ for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Slapple's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
 end
+
+wait(1)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
