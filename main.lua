@@ -16,13 +16,13 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
 
 end
 
-fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
+fireclickdetector(workspace.Lobby["GloveStands"]["Boxer"].ClickDetector)
 
 wait(0.15)
 
 if GhostInvis == true then
 
-fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
+fireclickdetector(workspace.Lobby["GloveStands"]["Ghost"].ClickDetector)
 
 wait(0.15)
 
@@ -30,7 +30,7 @@ game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 
 wait(0.01)
 
-fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
+fireclickdetector(workspace.Lobby["GloveStands"]["Boxer"].ClickDetector)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Ghost Invisibility Activated" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
