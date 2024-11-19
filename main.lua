@@ -53,7 +53,7 @@ wait(0.6)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.874173164367676, 362.9585876464844, -2.117299795150757)
 
-wait(1)
+wait(1.3)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
