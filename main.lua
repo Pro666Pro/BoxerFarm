@@ -1,3 +1,5 @@
+-- go ahead skid it idc
+
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 :)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -145,6 +147,7 @@ if target then
     end)
 wait()
     spawn(function()
+	wait(1)
         for i = 1, 1000 do
             spawn(function()
                 game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
