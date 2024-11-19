@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 :)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 if not game.IsLoaded then
     game.Loaded:Wait()
 end
@@ -44,7 +44,7 @@ wait(0.2)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.874173164367676, 362.9585876464844, -2.117299795150757)
 
-wait(0.5)
+wait(0.7)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
@@ -63,7 +63,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
-wait(0.2)
+wait(0.3)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
@@ -157,7 +157,7 @@ if target then
     end)
 wait()
     spawn(function()
-	wait(1)
+	wait(0.46)
         for i = 1, 1000 do
             spawn(function()
                 game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
