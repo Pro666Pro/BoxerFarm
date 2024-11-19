@@ -49,11 +49,11 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
-wait(0.2)
+wait(0.6)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.874173164367676, 362.9585876464844, -2.117299795150757)
 
-wait(0.7)
+wait(1)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
