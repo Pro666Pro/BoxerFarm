@@ -72,8 +72,6 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
-game:GetService("ReplicatedStorage"):WaitForChild("IceSkate"):FireServer("Freeze")
-
 wait(0.5)
 
 if not SeverHOPSet then 
