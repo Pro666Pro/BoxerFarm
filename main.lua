@@ -1,23 +1,23 @@
 -- go ahead skid it idc
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
-
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 :)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 if not game.IsLoaded then
     game.Loaded:Wait()
 end
- 
-if CandyFarm == true then
 
-for i, v in pairs(game.Workspace.CandyCorns:GetChildren()) do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Head") and v:FindFirstChildWhichIsA("TouchTransmitter") then
-                    firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 0)
-                    firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 1)
-                end
-            end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Candy's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
+wait(0.1)
 
+if workspace:FindFirstChild("Baseplate") == nil then
+local S = Instance.new("Part")
+S.Name = "Baseplate"
+S.Anchored = true
+S.CanCollide = true
+S.Transparency = 0
+S.Position = Vector3.new(-7000, -7000, -7000)
+S.Size = Vector3.new(1000, 10, 1000)
+S.Parent = workspace
 end
 
 fireclickdetector(workspace.Lobby["GloveStands"]["Boxer"].ClickDetector)
@@ -42,6 +42,14 @@ end
 
 wait(0.2)
 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.874173164367676, 362.9585876464844, -2.117299795150757)
+
+wait(0.5)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
+
+wait(0.3)
+
 if SlappleFarm == true then
 
 for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
@@ -55,7 +63,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
-wait(1)
+wait(0.2)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
