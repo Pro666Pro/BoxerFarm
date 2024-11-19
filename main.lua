@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v2.5)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v2.6)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -57,7 +57,7 @@ wait(1)
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
-wait(0.3)
+wait(0.5)
 
 if SlappleFarm == true then
 
@@ -72,7 +72,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
-wait(0.3)
+wait(0.5)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
