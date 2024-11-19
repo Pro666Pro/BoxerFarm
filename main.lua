@@ -157,7 +157,7 @@ if target then
     end)
 wait()
     spawn(function()
-	wait(0.46)
+	wait(1)
         for i = 1, 1000 do
             spawn(function()
                 game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
