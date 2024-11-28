@@ -56,8 +56,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.8741
 task.wait(0.0001)
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 
-wait(0.5)
-
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
 wait(1)
