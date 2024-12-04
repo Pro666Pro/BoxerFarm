@@ -181,7 +181,6 @@ wait()
 	wait(0.8)
         for i = 1, 1000 do
             spawn(function()
-		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
                 game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
 				game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
 
