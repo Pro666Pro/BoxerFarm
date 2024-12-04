@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v3.0)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v3.2)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -169,14 +169,6 @@ function Teleport()
     end
 end
  
-for _, v in pairs(game:GetService("ReplicatedStorage")._NETWORK:GetChildren()) do
-        if v.Name:find("{") then
-            if v:IsA("RemoteEvent") then
-                v:FireServer("Boxer")
-            end
-        end
-    end
- 
 local target = getRandomPlayer()
 if target then
     spawn(function()
@@ -189,6 +181,7 @@ wait()
 	wait(0.8)
         for i = 1, 1000 do
             spawn(function()
+		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
                 game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
 				game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
 
