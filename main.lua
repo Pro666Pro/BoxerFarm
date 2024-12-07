@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v3.4)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v4.0)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -29,36 +29,35 @@ for _,v in pairs(game.Players:GetChildren()) do
 	end
 end
 
-fireclickdetector(workspace.Lobby["GloveStands"]["Boxer"].ClickDetector)
+fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
-wait(0.15)
+wait(.1)
 
 if GhostInvis == true then
 
-fireclickdetector(workspace.Lobby["GloveStands"]["Ghost"].ClickDetector)
+fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
 
-wait(0.15)
+wait(.3)
 
 game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 
-wait(0.01)
+wait(.1)
 
-fireclickdetector(workspace.Lobby["GloveStands"]["Boxer"].ClickDetector)
+fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Ghost Invisibility Activated" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
 end
 
-wait(1)
+wait(.3)
 
 repeat task.wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-15.874173164367676, 362.9585876464844, -2.117299795150757)
-task.wait(0.0001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
+task.wait(.1)
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
-wait(0.001)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
-wait(1)
+wait(0.45)
 
 if SlappleFarm == true then
 
@@ -75,7 +74,7 @@ end
 
 game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
 
-wait(0.5)
+wait(0.1)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
