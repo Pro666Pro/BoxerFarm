@@ -31,25 +31,25 @@ end
 
 fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
-wait(.1)
+wait(.3)
 
 if GhostInvis == true then
 
 fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
 
-wait(.3)
+wait(.5)
 
 game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 
-wait(.1)
+wait(.2)
 
 fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
+wait(.3)
+	
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Ghost Invisibility Activated" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
 end
-
-wait(.3)
 
 repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
