@@ -53,7 +53,6 @@ wait(.3)
 
 repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
-task.wait(.1)
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
