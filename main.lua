@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v4.0)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v4.1)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -41,11 +41,11 @@ wait(.5)
 
 game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 
-wait(.2)
+wait(.3)
 
 fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
-wait(.3)
+wait(.6)
 	
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Ghost Invisibility Activated" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
@@ -176,7 +176,7 @@ if target then
     end)
 wait()
     spawn(function()
-	wait(0.8)
+	wait(.7)
         for i = 1, 1000 do
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
@@ -186,7 +186,7 @@ wait()
             end)      
         end
     end)
-    wait(1)
+    wait(.5)
     Teleport()
 else
 Teleport() end
