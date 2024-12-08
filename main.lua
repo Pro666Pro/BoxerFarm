@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v4.3)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v5.0)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -54,9 +54,10 @@ end
 repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
+wait(.12)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
-wait(0.45)
+wait(.35)
 
 if SlappleFarm == true then
 
@@ -71,9 +72,33 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text =
   
 end
 
+if FarmToolbox == true then
+if game.Workspace:FindFirstChild("Toolbox") then
+fireclickdetector(game.Workspace.Toolbox.ClickDetector)
+end
+end
+
+if FarmOrbs == true then
+if game.Workspace:FindFirstChild("MATERIALIZEOrb") then
+game.Workspace.MATERIALIZEOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+if game.Workspace:FindFirstChild("JetOrb") then
+game.Workspace.JetOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+if game.Workspace:FindFirstChild("PhaseOrb") then
+game.Workspace.PhaseOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+if game.Workspace:FindFirstChild("GlitchOrb") then
+game.Workspace.GlitchOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+if game.Workspace:FindFirstChild("SiphonOrb") then
+game.Workspace.SiphonOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+
 game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
 
-wait(0.1)
+wait(0.2)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
