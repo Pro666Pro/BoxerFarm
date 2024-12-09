@@ -250,6 +250,7 @@ wait()
 else
 Teleport() end
 
-for i = 1, 9999 do
+while true do
 Teleport()
+task.wait()
 end
