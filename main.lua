@@ -104,6 +104,9 @@ if SlappleFarm == true then
 for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
                 if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChild("entered") and v.Name == "Slapple" or v.Name == "GoldenSlapple" and v:FindFirstChild("Glove") and v.Glove:FindFirstChildWhichIsA("TouchTransmitter") then
                     v.Glove.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		    wait(.05)
+		    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 0)
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 1)
                 end
             end
 end
@@ -115,18 +118,33 @@ end
 if FarmOrbs == true then
 if game.Workspace:FindFirstChild("MATERIALIZEOrb") then
 game.Workspace.MATERIALIZEOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(.05)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.MATERIALIZEOrb, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.MATERIALIZEOrb, 1)
 end
 if game.Workspace:FindFirstChild("JetOrb") then
 game.Workspace.JetOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(.05)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.JetOrb, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.JetOrb, 1)
 end
 if game.Workspace:FindFirstChild("PhaseOrb") then
 game.Workspace.PhaseOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(.05)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.PhaseOrb, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.PhaseOrb, 1)
 end
 if game.Workspace:FindFirstChild("GlitchOrb") then
 game.Workspace.GlitchOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(.05)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.GlitchOrb, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.GlitchOrb, 1)
 end
 if game.Workspace:FindFirstChild("SiphonOrb") then
 game.Workspace.SiphonOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+wait(.05)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.SiphonOrb, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.SiphonOrb, 1)
 end
 end
 end
