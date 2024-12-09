@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.7)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.8)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -70,13 +70,15 @@ v.Anchored = false
 end
 end
 game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CanTouch = false
-game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].Part.CanTouch = false
-workspace.DEATHBARRIER.CanTouch = false
-workspace.DEATHBARRIER2.CanTouch = false
-workspace.dedBarrier.CanTouch = false
-workspace.ArenaBarrier.CanTouch = false
-workspace.AntiDefaultArena.CanTouch = false
-
+game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"]:Destroy()
+game.Workspace.DEATHBARRIER.CanTouch = false
+game.Workspace.DEATHBARRIER2.CanTouch = false
+game.Workspace.dedBarrier.CanTouch = false
+game.Workspace.ArenaBarrier.CanTouch = false
+game.Workspace.AntiDefaultArena.CanTouch = false
+if game.Workspace.Lobby:FindFirstChild("brazil") then
+game.Workspace.Lobby.brazil:Destroy()
+end
 if GhostInvis == true then
 
 fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
@@ -97,7 +99,6 @@ repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
 task.wait()
-
 
 local function Farm()
 if SlappleFarm == true then
@@ -253,27 +254,12 @@ if target then
     end)
 wait()
     spawn(function()
-	game.Workspace[Name]["HumanoidRootPart"].CanCollide = false
-	game.Workspace[Name]["Head"].CanCollide = false
-	game.Workspace[Name]["Torso"].CanCollide = false
-	game.Workspace[Name]["Left Arm"].CanCollide = false
-	game.Workspace[Name]["Right Arm"].CanCollide = false
-	game.Workspace[Name]["Left Leg"].CanCollide = false
-	game.Workspace[Name]["Right Leg"].CanCollide = false
-	target.Character["HumanoidRootPart"].CanCollide = false
-	target.Character["Head"].CanCollide = false
-	target.Character["Torso"].CanCollide = false
-	target.Character["Left Arm"].CanCollide = false
-	target.Character["Right Arm"].CanCollide = false
-	target.Character["Left Leg"].CanCollide = false
-	target.Character["Right Leg"].CanCollide = false
 	wait(.7)
         for i = 1, 1000 do
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
                 game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
-				game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
-
+		game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
             end)      
         end
     end)
