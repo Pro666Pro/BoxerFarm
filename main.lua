@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.2)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.3)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -75,26 +75,24 @@ wait(.6)
 repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
-wait(.6)
+task.wait(.3)
+game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+task.wait(.3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
-wait(.5)
-
+local function Farm()
 if SlappleFarm == true then
-
 for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
                 if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChild("entered") and v.Name == "Slapple" or v.Name == "GoldenSlapple" and v:FindFirstChild("Glove") and v.Glove:FindFirstChildWhichIsA("TouchTransmitter") then
                     v.Glove.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
 end
-
 if FarmToolbox == true then
 if game.Workspace:FindFirstChild("Toolbox") then
 fireclickdetector(game.Workspace.Toolbox.ClickDetector)
 end
 end
-
 if FarmOrbs == true then
 if game.Workspace:FindFirstChild("MATERIALIZEOrb") then
 game.Workspace.MATERIALIZEOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -112,10 +110,7 @@ if game.Workspace:FindFirstChild("SiphonOrb") then
 game.Workspace.SiphonOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 end
-
-game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
-
-wait(.5)
+end
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
@@ -215,6 +210,7 @@ if target then
         while wait() do
             localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,7,0)
 	    Name = target.Name
+	    Farm()
         end 
     end)
 wait()
