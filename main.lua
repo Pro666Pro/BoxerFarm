@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v5.0)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v5.2)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -22,12 +22,26 @@ S.Parent = workspace
 end
 
 for _,v in pairs(game.Players:GetChildren()) do
-	if v.Character:FindFirstChild("rock") then
-        	v.Character:FindFirstChild("rock").CanTouch = false
-        	v.Character:FindFirstChild("rock").CanQuery = false
-		v.Character:FindFirstChild("rock").CanCollide = false
-	end
+if v.Character:FindFirstChild("rock") then
+v.Character:FindFirstChild("rock").CanTouch = false
+v.Character:FindFirstChild("rock").CanQuery = false
+v.Character:FindFirstChild("rock").CanCollide = false
 end
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v.ClassName == "Part" then
+v.Anchored = false
+end
+end
+
+game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CanTouch = false
+game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].Part.CanTouch = false
+workspace.DEATHBARRIER.CanTouch = false
+workspace.DEATHBARRIER2.CanTouch = false
+workspace.dedBarrier.CanTouch = false
+workspace.ArenaBarrier.CanTouch = false
+workspace.AntiDefaultArena.CanTouch = false
 
 fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
@@ -54,22 +68,18 @@ end
 repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
 until game.Players.LocalPlayer.Character:FindFirstChild("entered")
-wait(.12)
+wait(.4)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["Baseplate"].CFrame * CFrame.new(0,10,0)
 
-wait(.35)
+wait(.4)
 
 if SlappleFarm == true then
 
 for i, v in pairs(workspace.Arena.island5.Slapples:GetChildren()) do
                 if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChild("entered") and v.Name == "Slapple" or v.Name == "GoldenSlapple" and v:FindFirstChild("Glove") and v.Glove:FindFirstChildWhichIsA("TouchTransmitter") then
-                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 0)
-                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Glove, 1)
+                    v.Glove.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
-
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Slapple's Collected" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
-  
 end
 
 if FarmToolbox == true then
@@ -98,7 +108,7 @@ end
 
 game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
 
-wait(0.2)
+wait(.5)
 
 if not SeverHOPSet then 
     SeverHOPSet = { 
@@ -196,7 +206,7 @@ local target = getRandomPlayer()
 if target then
     spawn(function()
         while wait() do
-            localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+            localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,10,0)
         end 
     end)
 wait()
@@ -211,7 +221,7 @@ wait()
             end)      
         end
     end)
-    wait(.9)
+    wait(1.2)
     Teleport()
 else
 Teleport() end
