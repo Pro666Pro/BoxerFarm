@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v5.2)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v5.3)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -43,10 +43,6 @@ workspace.dedBarrier.CanTouch = false
 workspace.ArenaBarrier.CanTouch = false
 workspace.AntiDefaultArena.CanTouch = false
 
-fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
-
-wait(.3)
-
 if GhostInvis == true then
 
 fireclickdetector(workspace.Lobby["Ghost"].ClickDetector)
@@ -56,14 +52,14 @@ wait(.5)
 game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 
 wait(.3)
-
-fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
-
-wait(.6)
 	
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Ghost Invisibility Activated" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
 end
+
+fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
+
+wait(.6)
 
 repeat task.wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-909, 328, 3) -- regular arena
