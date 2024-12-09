@@ -6,6 +6,18 @@ if not game.IsLoaded then
     game.Loaded:Wait()
 end
 
+if AutoExecute == true then
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BoxerFarmUpgraded/main/main.lua'))()
+    ]])
+end
+end
+
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BypassAntiCheat/main/main.lua'))()
 
 wait(0.1)
@@ -35,7 +47,11 @@ game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
 game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
 game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
-
+for i,v in pairs(game.Workspace:GetChildren()) do
+if string.find(v.Name, "ÅBarrier") then
+v.CanCollide = false
+end
+end
 for _,v in pairs(game.Players:GetChildren()) do
 if v.Character:FindFirstChild("rock") then
 v.Character:FindFirstChild("rock").CanTouch = false
