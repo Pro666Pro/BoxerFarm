@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v5.3)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -21,6 +21,21 @@ S.Size = Vector3.new(1000, 10, 1000)
 S.Parent = workspace
 end
 
+game.Workspace[game.Players.LocalPlayer.Name]["HumanoidRootPart"].CanCollide = false
+game.Workspace[game.Players.LocalPlayer.Name]["Head"].CanCollide = false
+game.Workspace[game.Players.LocalPlayer.Name]["Torso"].CanCollide = false
+game.Workspace[game.Players.LocalPlayer.Name]["Left Arm"].CanCollide = false
+game.Workspace[game.Players.LocalPlayer.Name]["Right Arm"].CanCollide = false
+game.Workspace[game.Players.LocalPlayer.Name]["Left Leg"].CanCollide = false
+game.Workspace[game.Players.LocalPlayer.Name]["Right Leg"].CanCollide = false
+game.Players.LocalPlayer.Character["HumanoidRootPart"].CanCollide = false
+game.Players.LocalPlayer.Character["Head"].CanCollide = false
+game.Players.LocalPlayer.Character["Torso"].CanCollide = false
+game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
+game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
+game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+
 for _,v in pairs(game.Players:GetChildren()) do
 if v.Character:FindFirstChild("rock") then
 v.Character:FindFirstChild("rock").CanTouch = false
@@ -28,13 +43,11 @@ v.Character:FindFirstChild("rock").CanQuery = false
 v.Character:FindFirstChild("rock").CanCollide = false
 end
 end
-
 for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 if v.ClassName == "Part" then
 v.Anchored = false
 end
 end
-
 game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CanTouch = false
 game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].Part.CanTouch = false
 workspace.DEATHBARRIER.CanTouch = false
@@ -202,11 +215,26 @@ local target = getRandomPlayer()
 if target then
     spawn(function()
         while wait() do
-            localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,10,0)
+            localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,7,0)
+	    Name = target.Name
         end 
     end)
 wait()
     spawn(function()
+	game.Workspace[Name]["HumanoidRootPart"].CanCollide = false
+	game.Workspace[Name]["Head"].CanCollide = false
+	game.Workspace[Name]["Torso"].CanCollide = false
+	game.Workspace[Name]["Left Arm"].CanCollide = false
+	game.Workspace[Name]["Right Arm"].CanCollide = false
+	game.Workspace[Name]["Left Leg"].CanCollide = false
+	game.Workspace[Name]["Right Leg"].CanCollide = false
+	target.Character["HumanoidRootPart"].CanCollide = false
+	target.Character["Head"].CanCollide = false
+	target.Character["Torso"].CanCollide = false
+	target.Character["Left Arm"].CanCollide = false
+	target.Character["Right Arm"].CanCollide = false
+	target.Character["Left Leg"].CanCollide = false
+	target.Character["Right Leg"].CanCollide = false
 	wait(.7)
         for i = 1, 1000 do
             spawn(function()
