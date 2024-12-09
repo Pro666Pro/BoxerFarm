@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.4)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.6)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -13,6 +13,11 @@ if teleportFunc then
         if not game:IsLoaded() then
             game.Loaded:Wait()
         end
+AutoExecute = true
+GhostInvis = true
+FarmOrbs = true
+FarmToolbox = true
+SlappleFarm = true
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro666Pro/BoxerFarmUpgraded/main/main.lua'))()
     ]])
 end
