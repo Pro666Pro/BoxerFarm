@@ -65,8 +65,6 @@ wait(.5)
 game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 
 wait(.3)
-	
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Ghost Invisibility Activated" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
   
 end
 
