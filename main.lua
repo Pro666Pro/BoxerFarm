@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v7.5)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v7.6)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -267,7 +267,7 @@ if target then
 wait()
     spawn(function()
 	wait(.7)
-        repeat task.wait()
+        repeat
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)
 		coroutine.wrap(SlapFarm)()
