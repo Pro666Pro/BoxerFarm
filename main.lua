@@ -267,12 +267,12 @@ if target then
 wait()
     spawn(function()
 	wait(.7)
-        while wait(2) do
+        repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)
 		coroutine.wrap(SlapFarm)()
             end)      
-        end
+	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
     if FastServerhop == true then
     wait(.8)
