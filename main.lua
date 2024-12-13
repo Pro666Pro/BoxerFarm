@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v7.6)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v7.7)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -271,6 +271,15 @@ wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)
 		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		task.wait()
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
