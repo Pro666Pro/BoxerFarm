@@ -7,10 +7,12 @@ if not game.IsLoaded then
 end
 
 function SlapFarm()
-game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
-game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
-game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
-game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
+for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
+end
 end
 
 if AutoExecute == true then
