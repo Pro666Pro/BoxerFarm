@@ -1,9 +1,16 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v6.8)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v7)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
+end
+
+function SlapFarm()
+game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
+game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
 end
 
 if AutoExecute == true then
@@ -38,6 +45,7 @@ S.Size = Vector3.new(1000, 10, 1000)
 S.Parent = workspace
 end
 
+if NoCollide == true then
 game.Workspace[game.Players.LocalPlayer.Name]["HumanoidRootPart"].CanCollide = false
 game.Workspace[game.Players.LocalPlayer.Name]["Head"].CanCollide = false
 game.Workspace[game.Players.LocalPlayer.Name]["Torso"].CanCollide = false
@@ -52,6 +60,8 @@ game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
 game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
 game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
 game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+end
+
 for i,v in pairs(game.Workspace:GetChildren()) do
 if string.find(v.Name, "ÅBarrier") then
 v.CanCollide = false
@@ -258,8 +268,7 @@ wait()
         for i = 1, 1000 do
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
-                game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
-		game.ReplicatedStorage.Events.Boxing:FireServer(target, false)	
+		coroutine.wrap(SlapFarm)()
             end)      
         end
     end)
