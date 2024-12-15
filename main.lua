@@ -6,6 +6,11 @@ if not game.IsLoaded then
     game.Loaded:Wait()
 end
 
+
+wait(.3)
+print("load")
+wait(.2)
+
 function SlapFarm()
 for _, player in pairs(game:GetService("Players"):GetPlayers()) do
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
