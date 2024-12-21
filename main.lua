@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8.1)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -297,19 +297,15 @@ wait()
 		coroutine.wrap(SlapFarm)()
 		coroutine.wrap(SlapFarm)()
 		coroutine.wrap(SlapFarm)()
-		coroutine.wrap(SlapFarm)()
-		coroutine.wrap(SlapFarm)()
-		coroutine.wrap(SlapFarm)()
-		coroutine.wrap(SlapFarm)()
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
     if FastServerhop == true then
-    Stats()
     wait(.8)
-    else
     Stats()
+    else
     wait(1.3)
+    Stats()
     end
     Teleport()
     
