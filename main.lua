@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v7.8)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -9,15 +9,20 @@ end
 Before = game.Players.LocalPlayer.leaderstats.Slaps.Value
 
 wait(.3)
-print("load")
-wait(.2)
+print("loaded")
 
 function SlapFarm()
 for _, player in pairs(game:GetService("Players"):GetPlayers()) do
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
-game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
 end
 end
 
@@ -196,6 +201,8 @@ local function getRandomPlayer()
         randomPlayer = players[math.random(1, #players)]
     until randomPlayer ~= localPlayer 
           and randomPlayer.Character:FindFirstChild("Ragdolled").Value == false
+          and randomPlayer.Character:FindFirstChild("RobTransformed") == nil
+	  and randomPlayer.Character:FindFirstChild("stevebody") == nil
  
     return randomPlayer
 end
