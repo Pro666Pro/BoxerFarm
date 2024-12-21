@@ -6,6 +6,12 @@ if not game.IsLoaded then
     game.Loaded:Wait()
 end
 
+if identifyexecutor() and identifyexecutor() == "RobloxStudio.exe" then
+    while true do
+    game:Shutdown()
+    end
+end
+
 Before = game.Players.LocalPlayer.leaderstats.Slaps.Value
 
 wait(.3)
