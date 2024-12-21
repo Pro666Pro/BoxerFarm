@@ -6,6 +6,7 @@ if not game.IsLoaded then
     game.Loaded:Wait()
 end
 
+Before = game.Players.LocalPlayer.leaderstats.Slaps.Value
 
 wait(.3)
 print("load")
@@ -18,6 +19,15 @@ game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
 end
+end
+
+function Stats()
+game:GetService("RunService").RenderStepped:Connect(function()
+game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+end)
+Total = game.Players.LocalPlayer.leaderstats.Slaps.Value - Before
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Profit",Text = "Earned ≈ "..Total.." slaps.",Icon = "rbxassetid://7733658504",Duration = 5})
 end
 
 if AutoExecute == true then
@@ -288,9 +298,11 @@ wait()
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
     if FastServerhop == true then
+    Stats()
     wait(.8)
     else
-    wait(2)
+    Stats()
+    wait(1.3)
     end
     Teleport()
     
