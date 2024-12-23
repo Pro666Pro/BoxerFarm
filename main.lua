@@ -1,6 +1,6 @@
 -- go ahead skid it idc
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8.2)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8.4)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -302,10 +302,16 @@ wait()
     end)
     if FastServerhop == true then
     wait(.8)
-    
+    game:GetService("RunService").RenderStepped:Connect(function()
+game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+end)
     else
     wait(1.3)
-    
+    game:GetService("RunService").RenderStepped:Connect(function()
+game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+end)
     end
     Teleport()
     
