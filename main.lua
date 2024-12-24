@@ -1,6 +1,6 @@
 -- go ahead skid it I will care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9.5)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9.5)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -88,7 +88,7 @@ end
 for i,v in pairs(game.Players:GetChildren()) do
 	if v ~= game.Players.LocalPlayer then
 		if v.Name:find("Nexer") or v.Name:find("Sheese_K") or v.Name:find("gob08111") or v.Name:find("Karas22") then
-			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. You will get serverhopped in 6 seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. You will get serverhopped in 6 seconds." ,Duration = 6, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 			game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Glovel.Backflip, game.Players.LocalPlayer.Character.Humanoid):Play()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,10,0)
                         wait(6)
