@@ -324,8 +324,10 @@ wait()
         repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)	
-		for I = 1, 5 do
-		coroutine.wrap(SlapFarm)()	
+		for I = 1, 1005 do
+		game.ReplicatedStorage.Events.Boxing:FireServer(target, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(target, false)
+	
 						end				
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
