@@ -111,6 +111,12 @@ game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
 end
 end
 
@@ -311,9 +317,11 @@ wait()
         repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)	
-		for I = 1, 300 do
 		coroutine.wrap(SlapFarm)()
-						end				
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+						coroutine.wrap(SlapFarm)()
+						coroutine.wrap(SlapFarm)()
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
