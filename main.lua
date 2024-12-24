@@ -1,6 +1,6 @@
 -- go ahead skid it i wont care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v10.2)." ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v10.3)." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -88,7 +88,15 @@ end
 for i,v in pairs(game.Players:GetChildren()) do
 	if v ~= game.Players.LocalPlayer then
 		if v.Name:find("Nexer") or v.Name:find("Sheese_K") or v.Name:find("gob08111") or v.Name:find("Karas22") then
-			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. But you're still going to farm 🔥" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+			if v.leaderstats.Glove.Value = "Boxer" then
+			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 on this server. But you're still going to farm bc nexer is farming too 🔥" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+			else
+			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. Serverhopping bc you better not farm on me 👏" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+			wait(1)
+				while task.wait() do
+				Teleport()
+				end
+			end
 		end
 	end
 end
