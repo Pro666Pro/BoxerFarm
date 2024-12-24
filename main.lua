@@ -323,8 +323,8 @@ wait()
         repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)	
-		for I = 1, 10 do
-		coroutine.wrap(SlapFarm)()	
+		for I = 1, 100 do
+		SlapFarm()	
 						end				
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
