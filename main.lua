@@ -107,6 +107,7 @@ print("loaded")
 
 function SlapFarm()
 for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+while true do
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
@@ -123,6 +124,8 @@ game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+task.wait()
+		end
 end
 end
 
@@ -323,7 +326,7 @@ wait()
         repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)	
-		for I = 1, 100 do
+		
 		SlapFarm()	
 						end				
             end)      
