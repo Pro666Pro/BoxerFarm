@@ -88,26 +88,9 @@ end
 for i,v in pairs(game.Players:GetChildren()) do
 	if v ~= game.Players.LocalPlayer then
 		if v.Name:find("Nexer") or v.Name:find("Sheese") or v.Name:find("gob08111") then
-			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. Don't move to get serverhopped." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
-			game.Players.LocalPlayer.Character["HumanoidRootPart"].CanCollide = false
-game.Players.LocalPlayer.Character["Head"].CanCollide = false
-game.Players.LocalPlayer.Character["Torso"].CanCollide = false
-game.Players.LocalPlayer.Character["Left Arm"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Arm"].CanCollide = false
-game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
-game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
-			wait(1)
-			z = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-			game:GetService("RunService").Heartbeat:Connect(function()
-			if z ~= nil and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
-			M = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - z).Magnitude
-			if Magnitude > 1 then
-			print("moved")		
-			else
-                        Teleport()
-						end
-					end
-				end)		
+			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. You will get serverhopped in 10 seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+                        wait(10)
+			Teleport()
 		end
 	end
 end
