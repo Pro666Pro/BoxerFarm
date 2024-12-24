@@ -1,6 +1,6 @@
 -- go ahead skid it I will care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8.7)" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v8.8)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -87,7 +87,7 @@ end
 
 for i,v in pairs(game.Players:GetChildren()) do
 	if v ~= game.Players.LocalPlayer then
-		if v.Name:find("Nexer") or v.Name:find("Sheese") or v.Name:Find("gob08111") then
+		if v.Name:find("Nexer") or v.Name:find("Sheese") or v.Name:find("gob08111") then
 			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 (owner of this script) on server. Serverhopping in a few seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
 			wait(10)
 			Teleport()
@@ -322,17 +322,17 @@ wait()
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
     if FastServerhop == true then
-    wait(.8)
     game:GetService("RunService").RenderStepped:Connect(function()
 game:GetService("GuiService"):ClearError()
 game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
 end)
+		wait(.8)
     else
-    wait(1.3)
-    game:GetService("RunService").RenderStepped:Connect(function()
+game:GetService("RunService").RenderStepped:Connect(function()
 game:GetService("GuiService"):ClearError()
 game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
 end)
+    wait(1.3)
     end
     Teleport()
     
