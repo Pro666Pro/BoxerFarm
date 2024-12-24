@@ -87,7 +87,7 @@ end
 
 for i,v in pairs(game.Players:GetChildren()) do
 	if v ~= game.Players.LocalPlayer then
-		if string.find("Nexer") then
+		if string.find("Nexer") or string.find("Sheese") then
 			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 (owner of this script) on server. Serverhopping in a few seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "Ok"})
 			wait(10)
 			Teleport()
