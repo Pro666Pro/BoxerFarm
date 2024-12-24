@@ -1,6 +1,6 @@
 -- go ahead skid it I will care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9.9)." ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v10)." ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -108,6 +108,18 @@ print("loaded")
 function SlapFarm()
 for _, player in pairs(game:GetService("Players"):GetPlayers()) do
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+		game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+		game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
+game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
+game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+		game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
 game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
 game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
@@ -311,7 +323,7 @@ wait()
         repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)	
-		for I = 1, 200 do
+		for I = 1, 10 do
 		coroutine.wrap(SlapFarm)()	
 						end				
             end)      
