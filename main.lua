@@ -88,10 +88,10 @@ end
 for i,v in pairs(game.Players:GetChildren()) do
 	if v ~= game.Players.LocalPlayer then
 		if v.Name:find("Nexer") or v.Name:find("Sheese") or v.Name:find("gob08111") then
-			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. You will get serverhopped in 10 seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. You will get serverhopped in 6 seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 			game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.ReplicatedStorage.Assets.Glovel.Backflip, game.Players.LocalPlayer.Character.Humanoid):Play()
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,10,0)
-                        wait(10)
+                        wait(6)
 			while task.wait() do
 			Teleport()
 			end
@@ -322,6 +322,11 @@ wait()
 		coroutine.wrap(SlapFarm)()
 		coroutine.wrap(SlapFarm)()
 		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
@@ -330,13 +335,13 @@ wait()
 game:GetService("GuiService"):ClearError()
 game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
 end)
-		wait(.8)
+		wait(1.3)
     else
 game:GetService("RunService").RenderStepped:Connect(function()
 game:GetService("GuiService"):ClearError()
 game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
 end)
-    wait(1.3)
+    wait(2)
     end
     Teleport()
     
