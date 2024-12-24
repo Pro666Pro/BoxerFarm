@@ -324,7 +324,7 @@ wait()
         repeat task.wait()
             spawn(function()
 		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)	
-		for I = 1, 10 do
+		for I = 1, 5 do
 		coroutine.wrap(SlapFarm)()	
 						end				
             end)      
