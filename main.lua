@@ -1,6 +1,6 @@
 -- go ahead skid it I will care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9.6)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9.7)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -326,10 +326,21 @@ wait()
 	wait(.7)
         repeat task.wait()
             spawn(function()
-		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)
-		for I = 1, 20 do				
+		localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)			
 		coroutine.wrap(SlapFarm)()
-		end
+	        coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+	        coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+	        coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+	        coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+	        coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+	        coroutine.wrap(SlapFarm)()
+		coroutine.wrap(SlapFarm)()
+	        coroutine.wrap(SlapFarm)()					
             end)      
 	until game.CoreGui.RobloxPromptGui.promptOverlay:FindFirstChild("ErrorPrompt")
     end)
@@ -338,13 +349,13 @@ wait()
 game:GetService("GuiService"):ClearError()
 game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
 end)
-		wait(1.3)
+		wait(1.5)
     else
 game:GetService("RunService").RenderStepped:Connect(function()
 game:GetService("GuiService"):ClearError()
 game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
 end)
-    wait(2)
+    wait(2.8)
     end
     Teleport()
     
