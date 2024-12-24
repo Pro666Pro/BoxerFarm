@@ -1,6 +1,6 @@
 -- go ahead skid it I will care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v9.1)" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150",Button1 = "alright dud"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -90,7 +90,9 @@ for i,v in pairs(game.Players:GetChildren()) do
 		if v.Name:find("Nexer") or v.Name:find("Sheese") or v.Name:find("gob08111") then
 			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. You will get serverhopped in 10 seconds." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
                         wait(10)
+			while task.wait() do
 			Teleport()
+			end
 		end
 	end
 end
