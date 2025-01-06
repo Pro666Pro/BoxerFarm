@@ -96,15 +96,15 @@ print("loaded")
 function SlapFarm()
 for _, player in pairs(game:GetService("Players"):GetPlayers()) do
 game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
-game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGHit:FireServer(player)
 game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
-game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGHit:FireServer(player)
 game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
-game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGHit:FireServer(player)
 game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
-game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGHit:FireServer(player)
 game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
-game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGHit:FireServer(player)
 end
 end
 
