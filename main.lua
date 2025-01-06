@@ -1,6 +1,6 @@
 -- go ahead skid it i wont care
 
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "Made By DonjoSx, Upgraded By Nexer1234 (version: v10.4)." ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Credits",Text = "UTG Farm, Made By Nexer" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
 
 if not game.IsLoaded then
     game.Loaded:Wait()
@@ -85,21 +85,7 @@ end
 
 
 
-for i,v in pairs(game.Players:GetChildren()) do
-	if v ~= game.Players.LocalPlayer then
-		if v.Name:find("Nexer") or v.Name:find("Sheese_K") or v.Name:find("gob08111") or v.Name:find("Karas22") then
-			if v.leaderstats.Glove.Value == "Boxer" then
-			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 on this server. But you're still going to farm bc nexer is farming too 🔥" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
-			else
-			game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "There's Nexer1234 or his friends on server. Serverhopping bc you better not farm on me 👏" ,Duration = 10, Icon = "rbxthumb://type=Asset&id=9649923610&w=150&h=150"})
-			wait(1)
-				while task.wait() do
-				Teleport()
-				end
-			end
-		end
-	end
-end
+
 			
 
 Before = game.Players.LocalPlayer.leaderstats.Slaps.Value
@@ -109,12 +95,16 @@ print("loaded")
 
 function SlapFarm()
 for _, player in pairs(game:GetService("Players"):GetPlayers()) do
-game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
-game.ReplicatedStorage.Events.Boxing:FireServer(player, false)	
-game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
-game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
-game.ReplicatedStorage.Events.Boxing:FireServer(player, true)
-game.ReplicatedStorage.Events.Boxing:FireServer(player, false)
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer("enableRunMode")
+game:GetService("ReplicatedStorage").UTGGeneric:FireServer(player)
 end
 end
 
@@ -214,8 +204,12 @@ game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
 wait(.3)
   
 end
+if game.Workspace.Lobby:FindFirstChild("Untitled Tag Glove") then
+fireclickdetector(workspace.Lobby["Untitled Tag Glove"].ClickDetector)
+elseif game.Workspace.Lobby:FindFirstChild("UTG") then
+fireclickdetector(workspace.Lobby["UTG"].ClickDetector)
+end
 
-fireclickdetector(workspace.Lobby["Boxer"].ClickDetector)
 
 wait(.6)
 
@@ -303,7 +297,6 @@ local target = getRandomPlayer()
 if target then
     spawn(function()
         while wait() do
-	    game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
             localPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame * CFrame.new(0,9,0)
 	    Name = target.Name
 	    Farm()
